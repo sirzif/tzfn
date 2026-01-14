@@ -16,19 +16,19 @@ local variants = {
 		red = "#fc5f72",
 		grn = "#00c9ad",
 		ylw = "#ffb703",
-		blu = "#00a7a3",
+		blu = "#017d83",
 		mgt = "#ff80ab",
 
 		red_b = "#ff8a98",
 		grn_b = "#00f5d4",
 		ylw_b = "#ffd75a",
-		blu_b = "#01c4bb",
+		blu_b = "#00a7a3",
 		mgt_b = "#ffd1d7",
 
 		red_d = "#d44f60",
 		grn_d = "#00a88f",
 		ylw_d = "#cc9600",
-		blu_d = "#017d83",
+		blu_d = "#006475",
 		mgt_d = "#e1959f",
 
 		hl_low = "#242428",

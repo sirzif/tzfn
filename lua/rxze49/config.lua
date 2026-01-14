@@ -39,7 +39,7 @@ config.options = {
 	---@type table<string, string | PaletteColor>
 	groups = {
 		border = "red",
-		link = "fg",
+		link = "blu_b",
 		panel = "surface",
 
 		error = "red",
@@ -47,11 +47,11 @@ config.options = {
 		info = "blu",
 		ok = "grn_b",
 		warn = "ylw",
-		note = "grn",
-		todo = "mgt",
+		note = "blu",
+		todo = "grn",
 
 		git_add = "grn",
-		git_change = "mgt",
+		git_change = "ylw",
 		git_delete = "red",
 		git_dirty = "mgt",
 		git_ignore = "muted",

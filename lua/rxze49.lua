@@ -22,9 +22,9 @@ local function set_highlights()
 
 	local highlights = {}
 	local sources = {
-		require("rxze49.groups.base")(palette, styles, groups, config, make_border),
+		require("rxze49.groups.base")(palette, groups, styles, config, make_border),
 		require("rxze49.groups.treesitter")(palette, styles, groups),
-		require("rxze49.groups.semantic_tokens")(palette, groups),
+		require("rxze49.groups.semantic_tokens")(palette, styles, groups),
 		require("rxze49.groups.telescope")(palette, groups, make_border),
 	}
 	for _, s in ipairs(sources) do
@@ -481,7 +481,7 @@ local function set_highlights()
 		DiagnosticVirtualTextOk = { fg = groups.ok },
 		DiagnosticVirtualTextWarn = { fg = groups.warn },
 
-		FloatBorder = { fg = palette.red, bg = "NONE" },
+		FloatBorder = { fg = palette.grn_b, bg = "NONE" },
 		FloatTitle = { fg = palette.grn_b, bg = "NONE", bold = styles.bold },
 		Folded = { fg = palette.fg, bg = "NONE" },
 		NormalFloat = { bg = "NONE" },

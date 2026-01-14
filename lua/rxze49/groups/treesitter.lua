@@ -1,84 +1,83 @@
-local util = require("rxze49.util")
-
 return function(palette, styles, groups)
 	return {
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
-		["@variable"] = { fg = palette.fg, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.red, italic = styles.italic, bold = styles.bold },
-		["@variable.parameter"] = { fg = palette.fg, italic = styles.italic },
-		["@variable.parameter.builtin"] = { fg = palette.red, italic = styles.italic, bold = styles.bold },
+		["@variable"] = { link = "Identifier" },
+		["@variable.builtin"] = { fg = palette.mgt, italic = styles.italic, bold = styles.bold },
+		["@variable.parameter"] = { link = "Identifier" },
+		["@variable.parameter.builtin"] = { fg = palette.mgt, italic = styles.italic, bold = styles.bold },
 		["@variable.member"] = { fg = palette.fg },
 
-		["@constant"] = { fg = palette.ylw },
-		["@constant.builtin"] = { fg = palette.ylw, bold = styles.bold },
-		["@constant.macro"] = { fg = palette.ylw },
+		["@constant"] = { link = "Constant" },
+		["@constant.builtin"] = { fg = palette.grn_b, bold = styles.bold },
+		["@constant.macro"] = { fg = palette.grn_b },
 
-		["@module"] = { fg = palette.grn_b },
-		["@module.builtin"] = { fg = palette.red, bold = styles.bold },
+		["@module"] = { fg = palette.blu_b },
+		["@module.builtin"] = { fg = palette.mgt, bold = styles.bold },
 		["@label"] = { link = "Label" },
 
 		["@string"] = { link = "String" },
-		-- ["@string.documentation"] = {},
-		["@string.regexp"] = { fg = palette.mgt },
-		["@string.escape"] = { fg = palette.ylw },
-		["@string.special"] = { fg = palette.blu_b },
-		["@string.special.symbol"] = { fg = palette.fg },
-		["@string.special.url"] = { fg = palette.fg, underline = true },
-		-- ["@string.special.path"] = {},
+		["@string.documentation"] = { fg = palette.ylw_d },
+		["@string.regexp"] = { fg = palette.blu_b },
+		["@string.escape"] = { fg = palette.red },
+		["@string.special"] = { fg = palette.ylw_b },
+		["@string.special.symbol"] = { link = "@constant" },
+		["@string.special.url"] = { fg = palette.blu_b, underline = true },
+		["@string.special.path"] = { fg = palette.blu },
 
 		["@character"] = { link = "Character" },
-		["@character.special"] = { link = "Character" },
+		["@character.special"] = { fg = palette.red },
 
 		["@boolean"] = { link = "Boolean" },
 		["@number"] = { link = "Number" },
-		["@number.float"] = { link = "Number" },
-		["@float"] = { link = "Number" },
+		["@number.float"] = { link = "Float" },
+		["@float"] = { link = "Float" },
 
-		["@type"] = { fg = palette.blu },
-		["@type.builtin"] = { fg = palette.blu_d, bold = styles.bold },
-		-- ["@type.definition"] = {},
+		["@type"] = { link = "Type" },
+		["@type.builtin"] = { fg = palette.blu, bold = styles.bold },
+		["@type.definition"] = { link = "Identifier" },
 
-		["@attribute"] = { fg = palette.blu_b },
-		["@attribute.builtin"] = { fg = palette.blu_b, bold = styles.bold },
-		["@property"] = { fg = palette.fg, italic = styles.italic },
+		["@attribute"] = { link = "Constant" },
+		["@attribute.builtin"] = { fg = palette.blu, bold = styles.bold },
+		["@property"] = { link = "Identifier" },
 
-		["@function"] = { fg = palette.mgt },
-		["@function.builtin"] = { fg = palette.mgt, bold = styles.bold },
-		-- ["@function.call"] = {},
-		["@function.macro"] = { link = "Function" },
+		["@function"] = { link = "Function" },
+		["@function.builtin"] = { fg = palette.grn, bold = styles.bold },
+		["@function.call"] = { link = "Function" },
+		["@function.macro"] = { fg = palette.grn_b },
 
-		["@function.method"] = { fg = palette.mgt },
-		["@function.method.call"] = { fg = palette.mgt },
+		["@function.method"] = { link = "Function" },
+		["@function.method.call"] = { link = "Function" },
 
-		["@constructor"] = { fg = palette.blu },
+		["@constructor"] = { fg = palette.mgt },
 		["@operator"] = { link = "Operator" },
 
 		["@keyword"] = { link = "Keyword" },
-		-- ["@keyword.coroutine"] = {},
-		-- ["@keyword.function"] = {},
-		["@keyword.operator"] = { fg = palette.subtle },
-		["@keyword.import"] = { fg = palette.red },
-		["@keyword.storage"] = { fg = palette.red },
-		["@keyword.repeat"] = { fg = palette.red },
-		["@keyword.return"] = { fg = palette.red },
-		["@keyword.debug"] = { fg = palette.ylw },
-		["@keyword.exception"] = { fg = palette.red },
+		["@keyword.function"] = { link = "Statement" },
+		["@keyword.coroutine"] = { link = "Statement" },
+		["@keyword.operator"] = { link = "Operator" },
+		["@keyword.import"] = { link = "Include" },
+		["@keyword.type"] = { fg = palette.red },
+		["@keyword.modifier"] = { fg = palette.red },
+		["@keyword.repeat"] = { link = "Repeat" },
+		["@keyword.return"] = { link = "Statement" },
+		["@keyword.debug"] = { link = "Debug" },
+		["@keyword.exception"] = { link = "Exception" },
 
-		["@keyword.conditional"] = { fg = palette.red },
-		["@keyword.conditional.ternary"] = { fg = palette.red },
+		["@keyword.conditional"] = { link = "Conditional" },
+		["@keyword.conditional.ternary"] = { link = "Conditional" },
 
-		["@keyword.directive"] = { fg = palette.mgt },
-		["@keyword.directive.define"] = { fg = palette.mgt },
+		["@keyword.directive"] = { link = "PreProc" },
+		["@keyword.directive.define"] = { link = "Define" },
 
 		--- Punctuation
-		["@punctuation.delimiter"] = { fg = palette.subtle },
-		["@punctuation.bracket"] = { fg = palette.subtle },
-		["@punctuation.special"] = { fg = palette.subtle },
+		["@punctuation.delimiter"] = { link = "Delimiter" },
+		["@punctuation.bracket"] = { link = "Delimiter" },
+		["@punctuation.special"] = { link = "Delimiter" },
 
 		--- Comments
 		["@comment"] = { link = "Comment" },
-		-- ["@comment.documentation"] = {},
+		["@comment.documentation"] = { link = "Comment" },
 
 		["@comment.error"] = { fg = groups.error },
 		["@comment.warning"] = { fg = groups.warn },
@@ -96,22 +95,20 @@ return function(palette, styles, groups)
 		["@markup.heading"] = { fg = palette.blu, bold = styles.bold },
 
 		["@markup.quote"] = { fg = palette.fg },
-		["@markup.math"] = { link = "Special" },
+		["@markup.math"] = { fg = palette.blu_b },
 		["@markup.environment"] = { link = "Macro" },
 		["@markup.environment.name"] = { link = "@type" },
 
-		-- ["@markup.link"] = {},
-		["@markup.link.markdown_inline"] = { fg = palette.subtle },
-		["@markup.link.label.markdown_inline"] = { fg = palette.blu },
-		["@markup.link.url"] = { fg = groups.link },
+		["@markup.link"] = { fg = palette.fg, underline = true },
+		["@markup.link.label"] = { fg = palette.muted },
+		["@markup.link.url"] = { fg = groups.link, underline = true },
 
-		-- ["@markup.raw"] = { bg = palette.surface },
-		-- ["@markup.raw.block"] = { bg = palette.surface },
-		["@markup.raw.delimiter.markdown"] = { fg = palette.subtle },
+		["@markup.raw"] = { fg = palette.ylw },
+		["@markup.raw.block"] = { fg = palette.fg },
 
-		["@markup.list"] = { fg = palette.grn },
-		["@markup.list.checked"] = { fg = palette.blu, bg = palette.blu, blend = 10 },
-		["@markup.list.unchecked"] = { fg = palette.fg },
+		["@markup.list"] = { fg = palette.subtle },
+		["@markup.list.checked"] = { fg = palette.grn, bg = palette.grn_d, blend = 10 },
+		["@markup.list.unchecked"] = { fg = palette.subtle },
 
 		-- Markdown headings
 		["@markup.heading.1.markdown"] = { link = "markdownH1" },
@@ -129,10 +126,10 @@ return function(palette, styles, groups)
 
 		["@diff.plus"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
 		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
-		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
+		["@diff.delta"] = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
 
 		["@tag"] = { link = "Tag" },
-		["@tag.attribute"] = { fg = palette.fg },
+		["@tag.attribute"] = { fg = palette.subtle },
 		["@tag.delimiter"] = { fg = palette.fg },
 
 		--- Non-highlighting captures

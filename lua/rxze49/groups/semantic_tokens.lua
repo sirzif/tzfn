@@ -1,6 +1,6 @@
-local utils = require("rxze49.util")
+local util = require("rxze49.util")
 
-return function(palette, groups)
+return function(palette, styles, groups)
 	return {
 		["@lsp.type.boolean"] = { link = "@boolean" },
 		["@lsp.type.builtinType"] = { link = "@type.builtin" },
@@ -12,7 +12,7 @@ return function(palette, groups)
 		["@lsp.type.escapeSequence"] = { link = "@string.escape" },
 		["@lsp.type.formatSpecifier"] = { link = "@markup.list" },
 		["@lsp.type.generic"] = { link = "@variable" },
-		["@lsp.type.interface"] = { fg = utils.blend(palette.blu, palette.blu, 0.7) },
+		["@lsp.type.interface"] = { fg = palette.blu },
 		["@lsp.type.keyword"] = { link = "@keyword" },
 		["@lsp.type.lifetime"] = { link = "@keyword.storage" },
 		["@lsp.type.namespace"] = { link = "@module" },
@@ -26,7 +26,7 @@ return function(palette, groups)
 		["@lsp.type.string"] = { link = "@string" },
 		["@lsp.type.typeAlias"] = { link = "@type.definition" },
 		["@lsp.type.unresolvedReference"] = { undercurl = true, sp = groups.error },
-		["@lsp.type.variable"] = { link = "@variable" },
+		["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
 		["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
 		["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
 		["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
@@ -38,8 +38,8 @@ return function(palette, groups)
 		["@lsp.typemod.operator.injected"] = { link = "@operator" },
 		["@lsp.typemod.string.injected"] = { link = "@string" },
 		["@lsp.typemod.struct.defaultLibrary"] = { link = "@type.builtin" },
-		["@lsp.typemod.type.defaultLibrary"] = { fg = utils.blend(palette.blu_d, palette.blu_d, 0.8) },
-		["@lsp.typemod.typeAlias.defaultLibrary"] = { fg = utils.blend(palette.blu_d, palette.blu_d, 0.8) },
+		["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
+		["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "@type.builtin" },
 		["@lsp.typemod.variable.callable"] = { link = "@function" },
 		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
 		["@lsp.typemod.variable.injected"] = { link = "@variable" },
