@@ -38,7 +38,7 @@ config.options = {
 
 	---@type table<string, string | PaletteColor>
 	groups = {
-		border = "red_d",
+		border = "blu",
 		link = "blu_b",
 		panel = "surface",
 
