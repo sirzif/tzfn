@@ -105,7 +105,7 @@ return function(palette, groups, styles, config, make_border)
 		DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, blend = 10 },
 		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10 },
 
-		Boolean = { fg = palette.grn },
+		Boolean = { fg = palette.grn_b },
 		Character = { fg = palette.ylw },
 		Comment = { fg = palette.muted, italic = styles.italic },
 		Conditional = { fg = palette.red_d },
