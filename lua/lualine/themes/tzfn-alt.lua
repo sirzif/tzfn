@@ -1,5 +1,5 @@
-local p = require("rxze49.palette")
-local config = require("rxze49.config")
+local p = require("tzfn.palette")
+local config = require("tzfn.config")
 
 local bg_base = p.bg
 if config.options.styles.transparency then

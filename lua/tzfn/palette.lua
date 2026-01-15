@@ -1,10 +1,10 @@
-local options = require("rxze49.config").options
+local options = require("tzfn.config").options
 local variants = {
 	main = {
 		_nc = "#141414",
-		bg = "#181818",
-		surface = "#222222",
-		overlay = "#2a2a2a",
+		bg = "#201822",
+		surface = "#2b202d",
+		overlay = "#362839",
 
 		muted = "#5f6377",
 		subtle = "#767a90",

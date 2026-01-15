@@ -1,9 +1,9 @@
 local M = {}
-local config = require("rxze49.config")
+local config = require("tzfn.config")
 
 local function set_highlights()
-	local util = require("rxze49.util")
-	local palette = require("rxze49.palette")
+	local util = require("tzfn.util")
+	local palette = require("tzfn.palette")
 	local styles = config.options.styles
 
 	local groups = {}
@@ -22,10 +22,10 @@ local function set_highlights()
 
 	local highlights = {}
 	local sources = {
-		require("rxze49.groups.base")(palette, groups, styles, config, make_border),
-		require("rxze49.groups.treesitter")(palette, styles, groups),
-		require("rxze49.groups.semantic_tokens")(palette, styles, groups),
-		require("rxze49.groups.telescope")(palette, groups, make_border),
+		require("tzfn.groups.base")(palette, groups, styles, config, make_border),
+		require("tzfn.groups.treesitter")(palette, styles, groups),
+		require("tzfn.groups.semantic_tokens")(palette, groups),
+		require("tzfn.groups.telescope")(palette, groups, make_border),
 	}
 	for _, s in ipairs(sources) do
 		highlights = vim.tbl_deep_extend("force", highlights, s)
@@ -491,7 +491,7 @@ local function set_highlights()
 		PmenuExtra = { fg = palette.fg, bg = "NONE" },
 		PmenuKind = { fg = palette.blu, bg = "NONE" },
 		SignColumn = { fg = palette.fg, bg = "NONE" },
-		StatusLine = { fg = palette.subtle, bg = "NONE" },
+		StatusLine = { fg = palette.grn, bg = "NONE" },
 		StatusLineNC = { fg = palette.muted, bg = "NONE" },
 		TabLine = { bg = "NONE", fg = palette.subtle },
 		TabLineFill = { bg = "NONE" },
@@ -605,12 +605,12 @@ local function set_highlights()
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
 		vim.cmd([[
-		augroup rxze49
+		augroup tzfn
 			autocmd!
 			autocmd TermOpen * if &buftype=='terminal'
 				\|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
 				\|else|setlocal winhighlight=|endif
-			autocmd ColorSchemePre * autocmd! rxze49
+			autocmd ColorSchemePre * autocmd! tzfn
 		augroup END
 		]])
 	end
@@ -625,7 +625,7 @@ function M.colorscheme(variant)
 		vim.cmd("hi clear")
 		vim.cmd("syntax reset")
 	end
-	vim.g.colors_name = "rxze49"
+	vim.g.colors_name = "tzfn"
 
 	if variant == "light" then
 		vim.o.background = "light"

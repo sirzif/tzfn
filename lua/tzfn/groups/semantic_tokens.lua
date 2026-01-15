@@ -1,6 +1,4 @@
-local util = require("rxze49.util")
-
-return function(palette, styles, groups)
+return function(palette, groups)
 	return {
 		["@lsp.type.boolean"] = { link = "@boolean" },
 		["@lsp.type.builtinType"] = { link = "@type.builtin" },
