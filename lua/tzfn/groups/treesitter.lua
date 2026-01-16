@@ -92,7 +92,7 @@ return function(palette, styles, groups)
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
 
-		["@markup.heading"] = { fg = palette.blu, bold = styles.bold },
+		["@markup.heading"] = { fg = palette.grn, bold = styles.bold },
 
 		["@markup.quote"] = { fg = palette.fg },
 		["@markup.math"] = { fg = palette.blu_b },
