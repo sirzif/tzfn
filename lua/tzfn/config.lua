@@ -39,11 +39,11 @@ config.options = {
 	---@type table<string, string | PaletteColor>
 	groups = {
 		border = "red",
-		link = "blu_b",
+		link = "blu2",
 		panel = "surface",
 
 		error = "red",
-		hint = "blu_b",
+		hint = "cyn",
 		info = "blu",
 		ok = "grn",
 		warn = "ylw",
@@ -55,17 +55,17 @@ config.options = {
 		git_delete = "red",
 		git_dirty = "mgt",
 		git_ignore = "muted",
-		git_merge = "grn_b",
+		git_merge = "grn2",
 		git_rename = "grn",
-		git_stage = "grn_b",
+		git_stage = "grn2",
 		git_text = "mgt",
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor
-		h1 = "blu_b",
+		h1 = "blu2",
 		h2 = "blu",
 		h3 = "grn",
-		h4 = "grn_b",
+		h4 = "grn2",
 		h5 = "ylw",
 		h6 = "mgt",
 	},

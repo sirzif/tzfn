@@ -16,7 +16,7 @@ return {
 		a = { bg = p.surface, fg = p.blu, gui = "bold" },
 	},
 	visual = {
-		a = { bg = p.surface, fg = p.blu_b, gui = "bold" },
+		a = { bg = p.surface, fg = p.blu2, gui = "bold" },
 	},
 	replace = {
 		a = { bg = p.surface, fg = p.grn, gui = "bold" },

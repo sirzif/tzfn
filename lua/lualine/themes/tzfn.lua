@@ -18,8 +18,8 @@ return {
 		c = { bg = bg_base, fg = p.fg },
 	},
 	visual = {
-		a = { bg = p.blu_b, fg = p.bg, gui = "bold" },
-		b = { bg = p.overlay, fg = p.blu_b },
+		a = { bg = p.blu2, fg = p.bg, gui = "bold" },
+		b = { bg = p.overlay, fg = p.blu2 },
 		c = { bg = bg_base, fg = p.fg },
 	},
 	replace = {

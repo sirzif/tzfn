@@ -31,7 +31,7 @@ local function set_highlights()
 		highlights = vim.tbl_deep_extend("force", highlights, s)
 	end
 	local default_highlights = {
-		htmlArg = { fg = palette.blu_b },
+		htmlArg = { fg = palette.blu2 },
 		htmlBold = { bold = styles.bold },
 		htmlEndTag = { fg = palette.subtle },
 		htmlH1 = { link = "markdownH1" },
@@ -109,14 +109,14 @@ local function set_highlights()
 		NvimTreeWindowPicker = { link = "StatusLineTerm" },
 
 		-- nvim-neotest/neotest
-		NeotestAdapterName = { fg = palette.blu_b },
-		NeotestBorder = { fg = palette.hl_med },
+		NeotestAdapterName = { fg = palette.blu2 },
+		NeotestBorder = { fg = palette.hl2 },
 		NeotestDir = { fg = palette.blu },
-		NeotestExpandMarker = { fg = palette.hl_med },
+		NeotestExpandMarker = { fg = palette.hl2 },
 		NeotestFailed = { fg = palette.red },
 		NeotestFile = { fg = palette.fg },
-		NeotestFocused = { fg = palette.ylw, bg = palette.hl_med },
-		NeotestIndent = { fg = palette.hl_med },
+		NeotestFocused = { fg = palette.ylw, bg = palette.hl2 },
+		NeotestIndent = { fg = palette.hl2 },
 		NeotestMarked = { fg = palette.mgt, bold = styles.bold },
 		NeotestNamespace = { fg = palette.ylw },
 		NeotestPassed = { fg = palette.grn },
@@ -126,7 +126,7 @@ local function set_highlights()
 		NeotestTarget = { fg = palette.red },
 		NeotestTest = { fg = palette.ylw },
 		NeotestUnknown = { fg = palette.subtle },
-		NeotestWatching = { fg = palette.blu_b },
+		NeotestWatching = { fg = palette.blu2 },
 
 		-- nvim-neo-tree/neo-tree.nvim
 		NeoTreeGitAdded = { fg = groups.git_add },
@@ -146,7 +146,7 @@ local function set_highlights()
 		FlashLabel = { fg = palette.bg, bg = palette.red },
 
 		-- folke/which-key.nvim
-		WhichKey = { fg = palette.blu_b },
+		WhichKey = { fg = palette.blu2 },
 		WhichKeyBorder = make_border(),
 		WhichKeyDesc = { fg = palette.ylw },
 		WhichKeyFloat = { bg = groups.panel },
@@ -155,10 +155,10 @@ local function set_highlights()
 		WhichKeyIconAzure = { fg = palette.grn },
 		WhichKeyIconBlue = { fg = palette.grn },
 		WhichKeyIconCyan = { fg = palette.blu },
-		WhichKeyIconGreen = { fg = palette.grn_b },
+		WhichKeyIconGreen = { fg = palette.grn2 },
 		WhichKeyIconGrey = { fg = palette.subtle },
 		WhichKeyIconOrange = { fg = palette.mgt },
-		WhichKeyIconPurple = { fg = palette.blu_b },
+		WhichKeyIconPurple = { fg = palette.blu2 },
 		WhichKeyIconRed = { fg = palette.red },
 		WhichKeyIconYellow = { fg = palette.ylw },
 		WhichKeyNormal = { link = "NormalFloat" },
@@ -211,7 +211,7 @@ local function set_highlights()
 		VimwikiHeader6 = { link = "markdownH6" },
 		VimwikiHeaderChar = { fg = palette.subtle },
 		VimwikiLink = { link = "markdownUrl" },
-		VimwikiList = { fg = palette.blu_b },
+		VimwikiList = { fg = palette.blu2 },
 		VimwikiNoExistsLink = { fg = palette.red },
 
 		-- phaazon/hop.nvim
@@ -247,9 +247,9 @@ local function set_highlights()
 		NotifyINFOIcon = { link = "NotifyINFOTitle" },
 		NotifyINFOTitle = { fg = groups.info },
 		NotifyTRACEBody = { link = "NormalFloat" },
-		NotifyTRACEBorder = make_border(palette.blu_b),
+		NotifyTRACEBorder = make_border(palette.blu2),
 		NotifyTRACEIcon = { link = "NotifyTRACETitle" },
-		NotifyTRACETitle = { fg = palette.blu_b },
+		NotifyTRACETitle = { fg = palette.blu2 },
 		NotifyWARNBody = { link = "NormalFloat" },
 		NotifyWARNBorder = make_border(groups.warn),
 		NotifyWARNIcon = { link = "NotifyWARNTitle" },
@@ -257,16 +257,16 @@ local function set_highlights()
 
 		-- glepnir/dashboard-nvim
 		DashboardCenter = { fg = palette.ylw },
-		DashboardFooter = { fg = palette.blu_b },
+		DashboardFooter = { fg = palette.blu2 },
 		DashboardHeader = { fg = palette.grn },
 		DashboardShortcut = { fg = palette.red },
 
 		-- folke/noice.nvim
-		NoiceCursor = { fg = palette.hl_high, bg = palette.fg },
+		NoiceCursor = { fg = palette.hl3, bg = palette.fg },
 
 		-- folke/trouble.nvim
 		TroubleText = { fg = palette.subtle },
-		TroubleCount = { fg = palette.blu_b, bg = palette.surface },
+		TroubleCount = { fg = palette.blu2, bg = palette.surface },
 		TroubleNormal = { fg = palette.fg, bg = groups.panel },
 
 		-- echasnovski/mini.nvim
@@ -322,10 +322,10 @@ local function set_highlights()
 		MiniIconsAzure = { fg = palette.blu },
 		MiniIconsBlue = { fg = palette.grn },
 		MiniIconsCyan = { fg = palette.blu },
-		MiniIconsGreen = { fg = palette.grn_b },
+		MiniIconsGreen = { fg = palette.grn2 },
 		MiniIconsGrey = { fg = palette.subtle },
 		MiniIconsOrange = { fg = palette.mgt },
-		MiniIconsPurple = { fg = palette.blu_b },
+		MiniIconsPurple = { fg = palette.blu2 },
 		MiniIconsRed = { fg = palette.red },
 		MiniIconsYellow = { fg = palette.ylw },
 
@@ -383,7 +383,7 @@ local function set_highlights()
 		MiniStatuslineModeNormal = { fg = palette.bg, bg = palette.mgt, bold = styles.bold },
 		MiniStatuslineModeOther = { fg = palette.bg, bg = palette.mgt, bold = styles.bold },
 		MiniStatuslineModeReplace = { fg = palette.bg, bg = palette.grn, bold = styles.bold },
-		MiniStatuslineModeVisual = { fg = palette.bg, bg = palette.blu_b, bold = styles.bold },
+		MiniStatuslineModeVisual = { fg = palette.bg, bg = palette.blu2, bold = styles.bold },
 
 		MiniSurround = { link = "IncSearch" },
 
@@ -421,16 +421,16 @@ local function set_highlights()
 		IlluminatedWordWrite = { link = "LspReferenceWrite" },
 
 		-- Saghen/blink.cmp
-		BlinkCmpDoc = { bg = palette.hl_low },
-		BlinkCmpDocSeparator = { bg = palette.hl_low },
-		BlinkCmpDocBorder = { fg = palette.hl_high },
+		BlinkCmpDoc = { bg = palette.hl1 },
+		BlinkCmpDocSeparator = { bg = palette.hl1 },
+		BlinkCmpDocBorder = { fg = palette.hl3 },
 		BlinkCmpGhostText = { fg = palette.muted },
 
 		BlinkCmpLabel = { fg = palette.muted },
 		BlinkCmpLabelDeprecated = { fg = palette.muted, strikethrough = true },
 		BlinkCmpLabelMatch = { fg = palette.fg, bold = styles.bold },
 
-		BlinkCmpDefault = { fg = palette.hl_med },
+		BlinkCmpDefault = { fg = palette.hl2 },
 		BlinkCmpKindText = { fg = palette.grn },
 		BlinkCmpKindMethod = { fg = palette.blu },
 		BlinkCmpKindFunction = { fg = palette.blu },
@@ -443,7 +443,7 @@ local function set_highlights()
 		BlinkCmpKindProperty = { fg = palette.blu },
 		BlinkCmpKindUnit = { fg = palette.grn },
 		BlinkCmpKindValue = { fg = palette.red },
-		BlinkCmpKindKeyword = { fg = palette.blu_b },
+		BlinkCmpKindKeyword = { fg = palette.blu2 },
 		BlinkCmpKindSnippet = { fg = palette.mgt },
 		BlinkCmpKindColor = { fg = palette.red },
 		BlinkCmpKindFile = { fg = palette.blu },
@@ -455,7 +455,7 @@ local function set_highlights()
 		BlinkCmpKindStruct = { fg = palette.blu },
 		BlinkCmpKindEvent = { fg = palette.blu },
 		BlinkCmpKindOperator = { fg = palette.blu },
-		BlinkCmpKindTypeParameter = { fg = palette.blu_b },
+		BlinkCmpKindTypeParameter = { fg = palette.blu2 },
 		BlinkCmpKindCodeium = { fg = palette.blu },
 		BlinkCmpKindCopilot = { fg = palette.blu },
 		BlinkCmpKindSupermaven = { fg = palette.blu },
@@ -482,7 +482,7 @@ local function set_highlights()
 		DiagnosticVirtualTextWarn = { fg = groups.warn },
 
 		FloatBorder = { fg = groups.border, bg = "NONE" },
-		FloatTitle = { fg = palette.grn_b, bg = "NONE", bold = styles.bold },
+		FloatTitle = { fg = palette.grn2, bg = "NONE", bold = styles.bold },
 		Folded = { fg = palette.fg, bg = "NONE" },
 		NormalFloat = { bg = "NONE" },
 		Normal = { fg = palette.fg, bg = "NONE" },
@@ -491,7 +491,7 @@ local function set_highlights()
 		PmenuExtra = { fg = palette.fg, bg = "NONE" },
 		PmenuKind = { fg = palette.blu, bg = "NONE" },
 		SignColumn = { fg = palette.fg, bg = "NONE" },
-		StatusLine = { fg = palette.grn, bg = "NONE" },
+		StatusLine = { fg = palette.subtle, bg = "NONE" },
 		StatusLineNC = { fg = palette.muted, bg = "NONE" },
 		TabLine = { bg = "NONE", fg = palette.subtle },
 		TabLineFill = { bg = "NONE" },
@@ -504,7 +504,7 @@ local function set_highlights()
 		TelescopeNormal = { fg = palette.subtle, bg = "NONE" },
 		TelescopePromptNormal = { fg = palette.fg, bg = "NONE" },
 		TelescopeSelection = { fg = palette.fg, bg = "NONE", bold = styles.bold },
-		TelescopeSelectionCaret = { fg = palette.grn_b },
+		TelescopeSelectionCaret = { fg = palette.grn2 },
 
 		TroubleNormal = { bg = "NONE" },
 
@@ -596,8 +596,8 @@ local function set_highlights()
 		vim.g.terminal_color_11 = palette.ylw -- bright yellow
 		vim.g.terminal_color_4 = palette.blu -- blue
 		vim.g.terminal_color_12 = palette.blu -- bright blue
-		vim.g.terminal_color_5 = palette.blu_b -- magenta
-		vim.g.terminal_color_13 = palette.blu_b -- bright magenta
+		vim.g.terminal_color_5 = palette.blu2 -- magenta
+		vim.g.terminal_color_13 = palette.blu2 -- bright magenta
 		vim.g.terminal_color_6 = palette.mgt -- cyan
 		vim.g.terminal_color_14 = palette.mgt -- bright cyan
 		vim.g.terminal_color_7 = palette.fg -- white

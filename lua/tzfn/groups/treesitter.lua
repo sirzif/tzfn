@@ -10,9 +10,9 @@ return function(palette, styles, groups)
 
 		["@constant"] = { link = "Constant" },
 		["@constant.builtin"] = { fg = palette.mgt, bold = styles.bold },
-		["@constant.macro"] = { fg = palette.grn_b },
+		["@constant.macro"] = { fg = palette.grn2 },
 
-		["@module"] = { fg = palette.blu_b },
+		["@module"] = { fg = palette.blu2 },
 		["@module.builtin"] = { fg = palette.mgt, bold = styles.bold },
 		["@label"] = { link = "Label" },
 
@@ -44,7 +44,7 @@ return function(palette, styles, groups)
 		["@function"] = { link = "Function" },
 		["@function.builtin"] = { fg = palette.grn, bold = styles.bold },
 		["@function.call"] = { link = "Function" },
-		["@function.macro"] = { fg = palette.grn_b },
+		["@function.macro"] = { fg = palette.grn2 },
 
 		["@function.method"] = { link = "Function" },
 		["@function.method.call"] = { link = "Function" },
@@ -95,20 +95,20 @@ return function(palette, styles, groups)
 		-- ["@markup.heading"] = { fg = palette.grn, bold = styles.bold },
 
 		["@markup.quote"] = { fg = palette.fg },
-		["@markup.math"] = { fg = palette.blu_b },
+		["@markup.math"] = { fg = palette.blu2 },
 		["@markup.environment"] = { link = "Macro" },
 		["@markup.environment.name"] = { link = "@type" },
 
 		["@markup.link"] = { fg = palette.fg, underline = true },
 		["@markup.link.markdown_inline"] = { fg = palette.fg, underline = false },
-		["@markup.link.label"] = { fg = palette.grn_b },
+		["@markup.link.label"] = { fg = palette.grn2 },
 		["@markup.link.url"] = { fg = groups.link, underline = true },
 
 		["@markup.raw"] = { fg = palette.ylw },
 		["@markup.raw.block"] = { fg = palette.fg },
 
 		["@markup.list"] = { fg = palette.subtle },
-		["@markup.list.checked"] = { fg = palette.grn, bg = palette.grn_d, blend = 10 },
+		["@markup.list.checked"] = { fg = palette.grn, bg = palette.grn3, blend = 10 },
 		["@markup.list.unchecked"] = { fg = palette.subtle },
 
 		-- Markdown headings
