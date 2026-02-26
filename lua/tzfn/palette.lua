@@ -29,7 +29,7 @@ local variants = {
 		ylw3 = "#332302",
 		blu3 = "#1a2b33",
 
-		err = "#f71111",
+		err = "#d9213f",
 
 		hl1 = "#291f2b",
 		hl2 = "#372a3b",
