@@ -42,7 +42,7 @@ config.options = {
 		link = "blu2",
 		panel = "surface",
 
-		error = "red",
+		error = "err",
 		hint = "cyn",
 		info = "blu",
 		ok = "grn",
@@ -62,12 +62,12 @@ config.options = {
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor
-		h1 = "blu2",
-		h2 = "blu",
-		h3 = "grn",
-		h4 = "grn2",
-		h5 = "ylw",
-		h6 = "mgt",
+		h1 = "red",
+		h2 = "mgt",
+		h3 = "cyn",
+		h4 = "blu",
+		h5 = "blu2",
+		h6 = "muted",
 	},
 
 	---@type table<string, Highlight>

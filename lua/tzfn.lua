@@ -504,7 +504,7 @@ local function set_highlights()
 		TelescopeNormal = { fg = palette.subtle, bg = "NONE" },
 		TelescopePromptNormal = { fg = palette.fg, bg = "NONE" },
 		TelescopeSelection = { fg = palette.fg, bg = "NONE", bold = styles.bold },
-		TelescopeSelectionCaret = { fg = palette.grn2 },
+		TelescopeSelectionCaret = { fg = palette.cyn2 },
 
 		TroubleNormal = { bg = "NONE" },
 
