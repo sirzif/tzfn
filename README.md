@@ -15,7 +15,7 @@ TODO
 
 ```lua
 {
-    "martynasmuizys/horizn.nvim",
+    "martynasmuizys/tzfn.nvim",
     name = "tzfn"
     config = function()
         require("tzfn").setup({
