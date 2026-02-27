@@ -629,7 +629,7 @@ function M.colorscheme(variant)
 
 	if variant == "light" then
 		vim.o.background = "light"
-	elseif variant == "main" then
+	elseif variant == "main" or variant == "vibrant" then
 		vim.o.background = "dark"
 	end
 
