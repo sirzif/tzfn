@@ -18,8 +18,15 @@ TODO
     "martynasmuizys/horizn.nvim",
     name = "tzfn"
     config = function()
-        vim.cmd("colorscheme rose-pine")
-    end
+        require("tzfn").setup({
+            enable = {
+                terminal = true,
+            },
+            styles = {
+                transparency = true,
+            },
+        })
+    end,
 }
 ```
 
@@ -28,3 +35,4 @@ TODO
 ## Special Thanks
 
 [rose-pine](https://github.com/rose-pine/neovim/) - for showing da wae
+[tokyonight](https://github.com/folke/tokyonight.nvim/) - for showing anotha wae
