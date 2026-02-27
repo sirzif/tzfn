@@ -57,7 +57,7 @@ return function(palette, styles, groups)
 		["@keyword"] = { link = "Keyword" },
 		["@keyword.function"] = { fg = palette.blu2 },
 		["@keyword.coroutine"] = { link = "Statement" },
-		["@keyword.operator"] = { fg = palette.blu },
+		["@keyword.operator"] = { link = "Operator" },
 		["@keyword.import"] = { link = "Include" },
 		["@keyword.type"] = { fg = palette.blu2 },
 		["@keyword.modifier"] = { fg = palette.blu2 },
