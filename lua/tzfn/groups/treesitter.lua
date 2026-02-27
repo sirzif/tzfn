@@ -1,32 +1,34 @@
+local util = require("tzfn.util")
+
 return function(palette, styles, groups)
 	return {
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
 		["@variable"] = { link = "Identifier" },
-		["@variable.builtin"] = { fg = palette.mgt, italic = styles.italic, bold = styles.bold },
+		["@variable.builtin"] = { fg = util.blend(palette.mgt2, palette.mgt, 0.3) },
 		["@variable.parameter"] = { link = "Identifier" },
-		["@variable.parameter.builtin"] = { fg = palette.mgt, italic = styles.italic, bold = styles.bold },
+		["@variable.parameter.builtin"] = { fg = util.blend(palette.mgt2, palette.mgt, 0.3) },
 		["@variable.member"] = { fg = palette.fg },
 
 		["@constant"] = { link = "Constant" },
-		["@constant.builtin"] = { fg = palette.mgt, bold = styles.bold },
+		["@constant.builtin"] = { fg = util.blend(palette.mgt2, util.blend(palette.mgt2, palette.mgt, 0.3), 0.3) },
 		["@constant.macro"] = { fg = palette.mgt2 },
 
 		["@module"] = { fg = palette.mgt2 },
-		["@module.builtin"] = { fg = palette.mgt2, bold = styles.bold },
+		["@module.builtin"] = { fg = palette.mgt2 },
 		["@label"] = { link = "Label" },
 
 		["@string"] = { link = "String" },
-		["@string.documentation"] = { fg = palette.grn2 },
-		["@string.regexp"] = { fg = palette.red },
-		["@string.escape"] = { fg = palette.red },
-		["@string.special"] = { fg = palette.red },
+		["@string.documentation"] = { link = "String" },
+		["@string.regexp"] = { link = "@constant" },
+		["@string.escape"] = { link = "@constant" },
+		["@string.special"] = { link = "@constant" },
 		["@string.special.symbol"] = { link = "@constant" },
-		["@string.special.path"] = { fg = palette.red },
+		["@string.special.path"] = { link = "@constant" },
 		["@string.special.url"] = { fg = palette.fg, underline = true },
 
 		["@character"] = { link = "Character" },
-		["@character.special"] = { fg = palette.red },
+		["@character.special"] = { fg = util.blend(palette.red2, palette.red, 0.3) },
 
 		["@boolean"] = { link = "Boolean" },
 		["@number"] = { link = "Number" },
@@ -34,17 +36,17 @@ return function(palette, styles, groups)
 		["@float"] = { link = "Float" },
 
 		["@type"] = { link = "Type" },
-		["@type.builtin"] = { fg = palette.mgt, bold = styles.bold },
+		["@type.builtin"] = { fg = util.blend(palette.mgt2, palette.mgt, 0.3) },
 		["@type.definition"] = { link = "Type" },
 
-		["@attribute"] = { fg = palette.red },
-		["@attribute.builtin"] = { fg = palette.mgt, bold = styles.bold },
+		["@attribute"] = { fg = util.blend(palette.red2, palette.red, 0.3) },
+		["@attribute.builtin"] = { fg = util.blend(palette.mgt2, palette.mgt, 0.3) },
 		["@property"] = { fg = palette.fg },
 
 		["@function"] = { link = "Function" },
-		["@function.builtin"] = { fg = palette.cyn, bold = styles.bold },
+		["@function.builtin"] = { fg = palette.cyn },
 		["@function.call"] = { fg = palette.cyn2 },
-		["@function.macro"] = { fg = palette.mgt },
+		["@function.macro"] = { fg = util.blend(palette.mgt2, palette.mgt, 0.3) },
 
 		["@function.method"] = { link = "Function" },
 		["@function.method.call"] = { fg = palette.cyn2 },
@@ -91,8 +93,6 @@ return function(palette, styles, groups)
 		["@markup.italic"] = { italic = true },
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
-
-		-- ["@markup.heading"] = { fg = palette.grn, bold = styles.bold },
 
 		["@markup.quote"] = { fg = palette.fg },
 		["@markup.math"] = { fg = palette.blu2 },
