@@ -35,4 +35,5 @@ TODO
 ## Special Thanks
 
 [rose-pine](https://github.com/rose-pine/neovim/) - for showing da wae
+
 [tokyonight](https://github.com/folke/tokyonight.nvim/) - for showing anotha wae
