@@ -2,8 +2,6 @@ local util = require("tzfn.util")
 
 return function(palette, styles, groups)
 	return {
-		--- Treesitter
-		--- |:help treesitter-highlight-groups|
 		["@variable"] = { link = "Identifier" },
 		["@variable.builtin"] = { fg = util.blend(palette.mgt2, palette.mgt, 0.3) },
 		["@variable.parameter"] = { link = "Identifier" },

@@ -1,6 +1,6 @@
 local util = require("tzfn.util")
 
-return function(palette, groups, styles, config, make_border)
+return function(palette, styles, groups, config, make_border)
 	return {
 		ColorColumn = { bg = palette.surface },
 		Conceal = { bg = "NONE" },
@@ -67,7 +67,7 @@ return function(palette, groups, styles, config, make_border)
 		TabLineSel = { fg = palette.fg, bg = palette.overlay, bold = styles.bold },
 		Title = { fg = palette.grn, bold = true },
 		VertSplit = { fg = groups.border },
-		Visual = { bg = palette.grn2, blend = 15 },
+		Visual = { bg = palette.blu, blend = 15 },
 		-- VisualNOS = {},
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
 		-- Whitespace = {},
@@ -151,5 +151,48 @@ return function(palette, groups, styles, config, make_border)
 		healthError = { fg = groups.error },
 		healthSuccess = { fg = groups.info },
 		healthWarning = { fg = groups.warn },
+
+		htmlArg = { fg = palette.blu2 },
+		htmlBold = { bold = styles.bold },
+		htmlEndTag = { fg = palette.subtle },
+		htmlH1 = { link = "markdownH1" },
+		htmlH2 = { link = "markdownH2" },
+		htmlH3 = { link = "markdownH3" },
+		htmlH4 = { link = "markdownH4" },
+		htmlH5 = { link = "markdownH5" },
+		htmlItalic = { italic = styles.italic },
+		htmlLink = { link = "markdownUrl" },
+		htmlTag = { fg = palette.subtle },
+		htmlTagN = { fg = palette.fg },
+		htmlTagName = { fg = palette.blu },
+
+		markdownDelimiter = { fg = palette.subtle },
+		markdownH1 = { fg = groups.h1, bold = styles.bold },
+		markdownH1Delimiter = { link = "markdownH1" },
+		markdownH2 = { fg = groups.h2, bold = styles.bold },
+		markdownH2Delimiter = { link = "markdownH2" },
+		markdownH3 = { fg = groups.h3, bold = styles.bold },
+		markdownH3Delimiter = { link = "markdownH3" },
+		markdownH4 = { fg = groups.h4, bold = styles.bold },
+		markdownH4Delimiter = { link = "markdownH4" },
+		markdownH5 = { fg = groups.h5, bold = styles.bold },
+		markdownH5Delimiter = { link = "markdownH5" },
+		markdownH6 = { fg = groups.h6, bold = styles.bold },
+		markdownH6Delimiter = { link = "markdownH6" },
+		markdownLinkText = { link = "markdownUrl" },
+		markdownUrl = { fg = groups.link, sp = groups.link, underline = true },
+
+		mkdCode = { fg = palette.blu, italic = styles.italic },
+		mkdCodeDelimiter = { fg = palette.mgt },
+		mkdCodeEnd = { fg = palette.blu },
+		mkdCodeStart = { fg = palette.blu },
+		mkdFootnotes = { fg = palette.blu },
+		mkdID = { fg = palette.blu, underline = true },
+		mkdInlineURL = { link = "markdownUrl" },
+		mkdLink = { link = "markdownUrl" },
+		mkdLinkDef = { link = "markdownUrl" },
+		mkdListItemLine = { fg = palette.fg },
+		mkdRule = { fg = palette.subtle },
+		mkdURL = { link = "markdownUrl" },
 	}
 end

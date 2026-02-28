@@ -1,6 +1,5 @@
 return function(palette, styles, make_border)
 	return {
-		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = make_border(),
 		TelescopeMatching = { fg = palette.cyn },
 		TelescopeNormal = { link = "NormalFloat" },
