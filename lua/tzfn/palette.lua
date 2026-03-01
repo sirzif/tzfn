@@ -1,10 +1,10 @@
 local options = require("tzfn.config").options
 local variants = {
 	main = {
-		_nc = "#141216",
-		bg = "#201822",
-		surface = "#2c232e",
-		overlay = "#3d3340",
+		_nc = "#121414",
+		bg = "#17191a",
+		surface = "#242b2e",
+		overlay = "#303e45",
 
 		fg = "#d6d9e0",
 		muted = "#646266",
@@ -31,23 +31,23 @@ local variants = {
 
 		err = "#d93b55",
 
-		hl1 = "#291f2b",
-		hl2 = "#372a3b",
-		hl3 = "#45324a",
+		hl1 = "#1f2224",
+		hl2 = "#293033",
+		hl3 = "#39464d",
 
 		none = "NONE",
 	},
 	light = {
 		-- idk anything about light themes
 		-- need elp with this perhaps idk
-		_nc = "#e6e3e8",
-		bg = "#f8f2fa",
-		surface = "#d4cbd6",
-		overlay = "#c4b1c9",
+		_nc = "#d8e4eb",
+		bg = "#dcf0fa",
+		surface = "#cce4f0",
+		overlay = "#b8d5e3",
 
 		fg = "#26242b",
-		muted = "#a6a4ab",
-		subtle = "#716f75",
+		muted = "#a4a9ab",
+		subtle = "#6f7375",
 
 		red = "#f84a12",
 		grn = "#36994e",
@@ -70,9 +70,9 @@ local variants = {
 
 		err = "#d93b55",
 
-		hl1 = "#f1e4f5",
-		hl2 = "#ddc5e3",
-		hl3 = "#c499cf",
+		hl1 = "#aec4cf",
+		hl2 = "#97b4c2",
+		hl3 = "#86a5b5",
 
 		none = "NONE",
 	},
