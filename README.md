@@ -11,7 +11,7 @@
 
 ![main](./assets/main.png)
 
-### Light
+### Light (might remove)
 
 ![light](./assets/light.png)
 
