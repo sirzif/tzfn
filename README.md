@@ -5,7 +5,9 @@
 
 <p align="center">Blade Runner 2049 inspired theme for Neovim</p>
 
-![main](./assets/main.png)
+<p align="center">
+    <img src="./assets/main.png"/>
+</p>
 
 ## Install
 
